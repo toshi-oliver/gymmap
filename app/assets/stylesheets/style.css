@@ -1,0 +1,33 @@
+.header-logo {
+  float: left;
+  font-size: 36px ;
+  font-family: Impact;
+  padding: 20px 40px;
+}
+
+.header-list {
+  padding:  33px 20px;
+  float: right;
+}
+
+.header-list a {
+  display: inline-block;
+  
+}
+
+header {
+  height: 90px;
+  background-color: #BCA9F5;
+  opacity: 0.8;
+}
+
+.btn {
+  background-color: rgb(116, 120, 124, 0.6);
+  color: black;
+  border-radius: 10px;
+  padding:  0px 20px;
+}
+
+.btn:hover {
+  background-color: rgb(116, 120, 124, 1);
+}
