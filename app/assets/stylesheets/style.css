@@ -17,7 +17,7 @@
 
 header {
   height: 90px;
-  background-color: #BCA9F5;
+  background-color: rgb(187, 168, 244);
   opacity: 0.8;
 }
 
@@ -30,4 +30,38 @@ header {
 
 .btn:hover {
   background-color: rgb(116, 120, 124, 1);
+}
+
+.content {
+  background-image: url(https://dietrecipe.biz/wp-content/uploads/2016/11/kintore-1-1.jpg);
+  height: 900px;
+  background-size: cover;
+  opacity: 0.7;
+}
+
+.right-wrapper {
+  float: right;
+  width: 600px;
+  margin-right: 40px; 
+}
+
+.section-title  {
+  color: rgba(216, 216, 216, 1.0);
+  font-size: 100px;
+  border-bottom: 2px solid #dee7ec;
+  margin-bottom: 50px;
+}
+
+.search-form {
+  font-size: 20px;
+  padding-bottom: 30px;
+}
+
+.search-form input {
+  font-size: 20px;
+  width: 200px;
+}
+
+.search-form a {
+  color: rgba(216, 216, 216, 1.0);
 }
