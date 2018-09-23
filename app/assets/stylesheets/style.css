@@ -102,3 +102,21 @@ header {
   background-color: #dee7ec;
   opacity: 0.8;
 }
+
+footer {
+  height: 100px;
+  background-color: #2f5167;
+  color: #dee7ec;
+  text-align: center;
+  padding-top: 16px;
+}
+
+.footer-logo {
+  font-size: 26px;
+  font-family: Impact;
+  letter-spacing: 5px;
+}
+
+.footer-message {
+  font-size: 18px;
+}
