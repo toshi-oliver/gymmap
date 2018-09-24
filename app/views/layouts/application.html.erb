@@ -1,15 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>GitApp</title>
+    <title>GymMap</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   </head>
 
   <body>
+    <header>
+      <div class="contaner">
+        <div class="header-logo">GYM <span class="fas fa-dumbbell"></span> MAP</div>
+        <div class="header-list">
+          <a class="btn post">投稿</a>
+          <a class="btn signup">新規登録</a>
+          <a class="btn login">ログイン</a>
+        </div>
+      </div>
+    </header>
+
     <%= yield %>
-  </body>
+
+    <footer>
+      <p class="footer-message">THE REAL WORKOUT STARTS WHEN YOU WANT TO STOP.</p>
+      <span class="footer-logo">GYMMAP</span>
+    </footer> 
+   </body>   
 </html>

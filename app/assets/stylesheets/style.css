@@ -1,0 +1,122 @@
+.header-logo {
+  float: left;
+  font-size: 36px ;
+  font-family: Impact;
+  padding: 20px 40px;
+}
+
+.header-list {
+  padding:  33px 20px;
+  float: right;
+}
+
+.header-list a {
+  display: inline-block;
+  
+}
+
+header {
+  height: 90px;
+  background-color: rgb(187, 168, 244);
+  opacity: 0.8;
+}
+
+.btn {
+  background-color: rgb(116, 120, 124, 0.6);
+  color: black;
+  border-radius: 10px;
+  padding:  0px 20px;
+}
+
+.btn:hover {
+  background-color: rgb(116, 120, 124, 1);
+}
+
+.content {
+  background-image: url(https://dietrecipe.biz/wp-content/uploads/2016/11/kintore-1-1.jpg);
+  height: 900px;
+  background-size: cover;
+  opacity: 0.7;
+}
+
+.top-wrapper {
+  width: 100%;
+  height: 300px;
+}
+.form {
+  float: right;
+  width: 600px;
+  margin-right: 40px;
+  margin-top: 20px;
+
+}
+
+.top-title  {
+  color: rgba(216, 216, 216, 1.0);
+  font-size: 100px;
+  border-bottom: 2px solid #dee7ec;
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+
+.search-form {
+  font-size: 20px;
+  padding-bottom: 30px;
+}
+
+.search-form input {
+  font-size: 20px;
+  width: 200px;
+}
+
+.search-form a {
+  color: rgba(216, 216, 216, 1.0);
+}
+
+.bottom-wrapper {
+  width: 100%;
+  height: 600px;
+}
+.bottom-title {
+  color: rgba(216, 216, 216, 1.0);
+  font-size: 100px;
+  border-bottom: 2px solid #dee7ec;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.bottom-contents {
+  height: 400px;
+  margin-left: 142px;
+  margin-right: 142px;
+}
+
+.bottom-content {
+  float: left;
+  height: 350px;
+  width: 300px;
+  margin-right: 40px;
+  margin-left: 40px;
+  background-color: #dee7ec;
+  opacity: 0.8;
+}
+
+footer {
+  height: 100px;
+  background-color: #2f5167;
+  color: #dee7ec;
+  text-align: center;
+  padding-top: 16px;
+}
+
+.footer-logo {
+  font-size: 26px;
+  font-family: Impact;
+  letter-spacing: 5px;
+}
+
+.footer-message {
+  font-size: 18px;
+}
