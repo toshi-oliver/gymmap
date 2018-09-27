@@ -119,3 +119,42 @@ footer {
 .footer-message {
   font-size: 18px;
 }
+
+.field input {
+  width: 18rem;
+  height: 2rem;
+  font-size: 1.6rem;
+  border-radius: 0.6rem;
+}
+
+.new_user {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.contents {
+  height: 580px;
+}
+.contents h2 {
+  text-align: center;
+}
+
+.field {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.actions input {
+  width: 200px;
+  height: 40px;
+  font-size: 1.5rem;
+  background-color: #2f5167;
+  border-radius: 10px;
+  color: #dee7ec;
+}
+
+.actions {
+  width: 200px;
+  margin: 0 auto;
+  padding: 20px;
+}

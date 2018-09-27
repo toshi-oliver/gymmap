@@ -4,8 +4,8 @@
     <%= devise_error_messages! %>
 
     <div class="field">
-    <%= f.label :username %> <em>(10文字まで)</em><br />
-    <%= f.text_field :username, autofocus: true, maxlength: "10" %>
+    <%= f.label :username %>
+    <%= f.text_field :username, autofocus: true %>
     </div>
 
     <div class="field">
@@ -27,7 +27,7 @@
     </div>
 
     <div class="actions">
-      <%= f.submit "Sign up" %>
+      <%= f.submit "User Create" %>
     </div>
   <% end %>
 </div>
