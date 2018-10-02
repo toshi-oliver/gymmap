@@ -1,0 +1,13 @@
+<div class="contents row">
+  <%= form_for [@map] do |f| %>
+    <h3>
+      投稿する
+    </h3>
+    <%= f.text_field :name, placeholder: "Shop" %>
+    <%= f.select :place_id, [["東京", 1], ["神奈川", 2], ["埼玉", 3], ["千葉", 4], ["群馬", "5"], ["栃木", "6"], ["山梨", "7"] ] %>
+    <%= f.select :category_id, [["ゴールドジム", 1], ["エニタイムフィットネス", 2], ["ライザップ", 3], ["カーブス", 4], ["セントラル", "5"], ["ティップネス", "6"], ["その他", "7"] ] , class:"form-control" %>
+    <%= f.text_field :image, placeholder: "Image Url" %>
+    <%= f.text_field :text, placeholder: "Review" %>
+    <%= f.submit "SENT" %>
+  <% end %>
+</div>
