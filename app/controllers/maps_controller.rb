@@ -20,7 +20,7 @@ class MapsController < ApplicationController
   end
 
   def map_params
-    params.required(:map).permit(:name, :text, :imgae, categories_attributes: [:id], places_attributes: [:id]).merge(user_id: current_user.id)
+    params.required(:map).permit(:name, :text, :imgae, :category_id, :place_id).merge(user_id: current_user.id)
   end 
 end
  
