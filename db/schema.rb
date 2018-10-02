@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_30_143015) do
+ActiveRecord::Schema.define(version: 2018_10_02_145504) do
 
   create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -24,9 +24,12 @@ ActiveRecord::Schema.define(version: 2018_09_30_143015) do
     t.datetime "updated_at", null: false
     t.text "text"
     t.text "image"
-    t.integer "user_id"
     t.integer "category_id"
     t.integer "place_id"
+    t.bigint "user_id"
+    t.bigint "category_id_id"
+    t.index ["category_id_id"], name: "index_maps_on_category_id_id"
+    t.index ["user_id"], name: "index_maps_on_user_id"
   end
 
   create_table "places", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
