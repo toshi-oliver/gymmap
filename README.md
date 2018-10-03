@@ -33,7 +33,7 @@ Things you may want to cover:
 
 ### Association
 has_many :comments
-has_many :posts
+has_many :maps
 
 ## mapsテーブル
 
@@ -47,7 +47,7 @@ has_many :posts
 |content|text|
 
 ### Association
-has_many :post_tags
+has_many :maps_tags
 belongs_to :category
 belongs_to :place
 belongs_to :user
