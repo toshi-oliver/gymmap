@@ -11,7 +11,6 @@ class MapsController < ApplicationController
 
   def create
     @map = Map.create(map_params)
-    redirect_to action: index
   end
 
   private
@@ -20,7 +19,7 @@ class MapsController < ApplicationController
   end
 
   def map_params
-    params.required(:map).permit(:name, :text, :imgae, :category_id, :place_id).merge(user_id: current_user.id)
+    params.required(:map).permit(:name, :content, :image, :category_id, :place_id).merge(user_id: current_user.id)
   end 
 end
  
