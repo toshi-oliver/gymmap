@@ -1,7 +1,7 @@
 class Map < ApplicationRecord
   belongs_to :user
   mount_uploader :image, ImageUploader
-  validates :image_size
+  validate :image_size
   validates :name, presence: true
   validates :category_id, presence: true
   validates :place_id, presence: true
