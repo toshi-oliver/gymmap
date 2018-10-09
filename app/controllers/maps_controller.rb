@@ -14,7 +14,16 @@ class MapsController < ApplicationController
   end
 
   def search
-    @maps = Map.where("name LIKE(?) OR category_id LIKE(?) OR place_id LIKE(?)", "%#{params[:keyword]}%", "params[:category_id]", "params[place_id]").limit(20)
+    if params[:keyword].present?
+    name_ids = Map.where("name LIKE(?)", "%#{params[:keyword]}%" ).pluck(:id)
+    end
+    if params[:place_id].present?
+    place_id_ids = Map.where("place_id = ?", params[:place_id]).pluck(:id)
+    end
+    if params[:category_id].present?
+    category_id_ids = Map.where("category_id = ?", params[:category_id]).pluck(:id)
+    end
+    @maps = Map.where("id IN (?) or id IN (?) or id IN (?)", name_ids, place_id_ids, category_id_ids)
   end
 
   private
