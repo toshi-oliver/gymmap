@@ -4,34 +4,13 @@
       <%= form_tag('/maps/search', method: :get) do %>
         <h3 class="top-title">search</h3>
         <div class="search-form">
-          <input placeholder="フリーワードで検索" name="keyword" type="search"></input>
+          <%= text_field_tag :keyword, "", placeholder: "フリーワードで検索" %>
+        </div> 
+        <div class="search-form">
+          <%= select_tag "place_id", options_for_select([["選択して下さい",""],["東京","1"],["神奈川","2"],["千葉","3"],["埼玉","4"],["栃木","5"],["群馬","6"],["山梨","7"],["茨城","8"],["なし",""]]) %>
         </div>
         <div class="search-form">
-          <select name="place_id" id="place_id" size="1" >
-            <option value="">選択してください</option>
-            <option value="1">東京</option>
-            <option value="2">神奈川</option>
-            <option value="3">埼玉</option>
-            <option value="4">千葉</option>
-            <option value="5">群馬</option>
-            <option value="6">栃木</option>
-            <option value="7">山梨</option>
-            <option value="8">茨城</option>
-            <option value="">なし</option>
-          </select>
-        </div>
-        <div class="search-form">
-          <select name="category_id" id="category_id" size="1" >
-            <option value="">選択してください</option>
-            <option value="1">ゴールドジム</option>
-            <option value="2">エニタイムフィットネス</option>
-            <option value="3">ライザップ</option>
-            <option value="4">カーブス</option>
-            <option value="5">セントラル</option>
-            <option value="6">ティップネス</option>
-            <option value="7">その他</option>
-            <option value="">なし</option>
-          </select>
+          <%= select_tag "category_id", options_for_select([["選択して下さい",""],["ゴールドジム","1"],["エニタイムフィットネス","2"],["ライザップ","3"],["カーブス","4"],["セントラル","5"],["ティップネス","6"],["コナミスポーツクラブ","7"],["その他","8"],["なし",""]]) %>
         </div>
         <button class="fas fa-search" title="検索" type="submit"> 検索</button>
       <% end %>
