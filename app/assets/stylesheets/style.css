@@ -65,7 +65,7 @@ header {
   padding-bottom: 30px;
 }
 
-.search-form input {
+.search-form input #name {
   font-size: 20px;
   width: 200px;
 }
