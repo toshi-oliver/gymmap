@@ -5,6 +5,7 @@ class Map < ApplicationRecord
   validates :name, presence: true
   validates :category_id, presence: true
   validates :place_id, presence: true
+  validates :image, presence: true
 
 
   def image_size
