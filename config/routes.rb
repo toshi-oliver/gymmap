@@ -3,7 +3,11 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show]
 
-  resources :maps, only: [:new, :create]
+  resources :maps, only: [:new, :create] do
+    collection do
+      get "search"
+    end
+  end
 
   root to: "maps#index"
 end

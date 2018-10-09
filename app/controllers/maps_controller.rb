@@ -13,6 +13,10 @@ class MapsController < ApplicationController
     @map = Map.create(map_params)
   end
 
+  def search
+    @maps = Map.where("name LIKE(?) OR category_id LIKE(?) OR place_id LIKE(?)", "%#{params[:keyword]}%", "params[:category_id]", "params[place_id]").limit(20)
+  end
+
   private
   def move_to_index
     redirect_to action: :index unless user_signed_in?

@@ -1,0 +1,21 @@
+<div class="contents">
+  <div class="header-section">
+    <h2>検索結果</h2>
+  </div>
+  <ul class="body" >
+    <% if @maps.present? %>
+    <% @maps.each do |map| %>
+    <li>
+      <a class="search" href= title="<%= map.name %>">
+        <div class="search-image">
+          <%= image_tag (map.image_url), height: "150px", width: "100%" %>
+        </div>
+        <div class="search-name">
+          <h4 class="gym-name"><%= map.name %></h4>
+        </div>
+      </a>
+    </li>
+    <% end %>
+    <% end %>
+  </ul>
+</div>

@@ -70,8 +70,10 @@ header {
   width: 200px;
 }
 
-.search-form a {
-  color: rgba(216, 216, 216, 1.0);
+.button.fas.fa-search {
+  color: rgba(216, 216, 216, 0);
+  height: 22px;
+  border-radius: 10px;
 }
 
 .bottom-wrapper {
@@ -170,7 +172,7 @@ footer {
   padding-top: 30px;
 }
 
-.contents-top h3 {
+.contents-top h2 {
   text-align: center;
 }
 
@@ -256,4 +258,33 @@ footer {
   margin-top: 20px;
   margin-left: 50px
   display: block;
+}
+
+.header-section h2 {
+  margin-bottom: 1em;
+  border-bottom: 3px solid #d7dbe2;
+  width: 600px;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+search {
+}
+
+a.search {
+  width: 200px;
+  height: 250px;
+  display: block;
+  float: left;
+  text-align: center;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+ul.body {
+  list-style: none;
+  height: 250px;
+  width: 800px;
+  margin: 0 auto;
+  padding-top: 30px;
 }
