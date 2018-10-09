@@ -14,7 +14,7 @@ class MapsController < ApplicationController
   end
 
   def search
-    @maps = Map.where('name LIKE(?)', "%#{params[:keyword]}%").limit(20)
+    @maps = Map.where("name LIKE(?) OR category_id LIKE(?) OR place_id LIKE(?)", "%#{params[:keyword]}%", "params[:category_id]", "params[place_id]").limit(20)
   end
 
   private
