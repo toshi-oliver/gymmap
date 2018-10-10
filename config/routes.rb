@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show]
 
-  resources :maps, only: [:new, :create] do
+  resources :maps, only: [:new, :create, :show] do
     collection do
       get "search"
     end
