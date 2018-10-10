@@ -6,7 +6,7 @@
     <% if @maps.present? %>
     <% @maps.each do |map| %>
     <li>
-      <a class="search" href= title="<%= map.name %>">
+      <a class="search" href="/maps/<%= map.id %>" title="<%= map.name %>">
         <div class="search-image">
           <%= image_tag (map.image_url), height: "150px", width: "100%" %>
         </div>
