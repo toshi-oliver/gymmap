@@ -1,10 +1,14 @@
 class MapsController < ApplicationController
 
-  before_action :move_to_index, except: :index
+  before_action :move_to_index, except: [:index,:show]
 
   def index
   end
-  
+
+  def show
+    @map = Map.find(params[:id])
+  end
+
   def new
     @map = Map.new
   end
