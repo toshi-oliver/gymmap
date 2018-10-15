@@ -3,7 +3,7 @@ class MapsController < ApplicationController
   before_action :move_to_index, except: [:index,:show]
 
   def index
-    @maps = Map.order('id ASC').limit(3)
+    @maps = Map.includes(:user).order('id ASC').limit(3)
   end
 
   def show
