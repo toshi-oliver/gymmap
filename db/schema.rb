@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_05_083040) do
+ActiveRecord::Schema.define(version: 2018_10_15_162611) do
 
   create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 2018_10_05_083040) do
     t.integer "place_id"
     t.bigint "user_id"
     t.text "content"
+    t.datetime "deleted_at"
     t.index ["user_id"], name: "index_maps_on_user_id"
   end
 
