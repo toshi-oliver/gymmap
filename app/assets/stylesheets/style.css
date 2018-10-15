@@ -65,13 +65,17 @@ header {
   padding-bottom: 30px;
 }
 
-.search-form input #name {
-  font-size: 20px;
+.search-form input#keyword {
+  font-size: 15px;
   width: 200px;
 }
 
-.button.fas.fa-search {
-  color: rgba(216, 216, 216, 0);
+select#place_id, #category_id {
+  width: 200px;
+  height: 20px;
+}
+
+button.fas.fa-search {
   height: 22px;
   border-radius: 10px;
 }
@@ -270,7 +274,7 @@ footer {
 
 
 
-a.search {
+a.search, a.my-maps {
   width: 200px;
   height: 250px;
   display: block;
@@ -299,9 +303,9 @@ ul.body {
   height: 250px;
 }
 
-.gym-name, .gym-review {
-  margin-top: 20px;
-  margin-bottom: 20px;
+h4.gym-name, .gym-review {
+  width: 180px;
+  margin: 10px auto;
   text-align: center;
 }
 
@@ -316,4 +320,8 @@ ul.body {
   width: 800px;
   height: 300px;
   margin: 0 auto;
+}
+
+a.my-maps {
+  border: 1px solid rgb(116, 120, 124);
 }

@@ -1,0 +1,19 @@
+<div class="contents">
+<div class="header-name">
+  <h2><%= current_user.username %> <span>さんのマイページ</span></h2>
+</div>
+<ul class="body" >
+  <% current_user.maps.each do |map| %>
+  <li>
+    <a class="my-maps" href="/maps/<%= map.id %>" >
+      <div class="my-map-image">
+        <%= image_tag (map.image_url), height: "150px", width: "100%" %>
+      </div>
+      <div class="my-map-name">
+        <h4 class="gym-name"><%= map.name %></h4>
+      </div>
+    </a>
+  </li>
+  <% end %>
+</ul>
+</div>
