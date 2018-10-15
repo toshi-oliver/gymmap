@@ -21,7 +21,7 @@
         <a class="header-logo" href="/">GYM <span class="fas fa-dumbbell"></span> MAP</a>
         <div class="header-list">
         <% if user_signed_in? %>
-          <a href='/users/<%= current_user.id %>' class="btn mypage" >マイページ</a>
+          <%= link_to "マイページ", user_path(current_user.id), method: :get, class: 'btn mypage' %>
           <%= link_to "投稿", new_map_path, method: :get, class: 'btn post' %>
           <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn logout' %>
         <% else %>
