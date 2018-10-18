@@ -19,9 +19,7 @@ class MapsController < ApplicationController
 
   def destroy
     map = Map.find(params[:id])
-    if map.user_id == current_user.id
-      map.destroy
-    end
+    map.destroy if map.user_id == current_user.id
   end
 
   def search
