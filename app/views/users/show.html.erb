@@ -5,13 +5,20 @@
 <ul class="body" >
   <% current_user.maps.each do |map| %>
   <li>
-    <div class="my-maps" >
+    <div class="my-map" >
       <a class="my-map-image" href="/maps/<%= map.id %>" >
         <%= image_tag (map.image_url), height: "150px", width: "100%" %>
       </a>
       <a class="my-map-name" href="/maps/<%= map.id %>" >
         <h4 class="gym-name"><%= map.name %></h4>
       </a>
+      <ul class="map-edit" >
+        <% if user_signed_in? && current_user.id == map.user_id %>
+        <li>
+          <%= link_to "削除", map_path(map.id), method: :delete %>
+        </li>
+        <% end %>
+      </ul>
     </div>
   </li>
   <% end %>

@@ -274,7 +274,7 @@ footer {
 
 
 
-a.search, .my-maps {
+a.search, .my-map {
   width: 200px;
   height: 250px;
   display: block;
@@ -283,6 +283,7 @@ a.search, .my-maps {
   margin-right: 15px;
   margin-left: 15px;
   border: 1px solid rgb(116, 120, 124);
+  position: relative;
 }
 
 ul.body {
@@ -304,16 +305,15 @@ ul.body {
   height: 250px;
 }
 
-h4.gym-name, .gym-review {
-  width: 180px;
-  margin: 10px auto;
-  text-align: center;
+.gym-review {
+  width: 300px;
 }
 
 .gym-map {
   width: 300px;
   height: 300px;
   border: 1px solid #000000;
+  margin: 15px 0;
 }
 
 .contents-comments {
@@ -321,4 +321,17 @@ h4.gym-name, .gym-review {
   width: 800px;
   height: 300px;
   margin: 0 auto;
+}
+
+.gym-name  {
+  width: 100%;
+  margin: -5px 0;
+  padding: 10px 0;
+}
+
+ul.map-edit {
+  list-style: none;
+  position: absolute;
+  bottom: 0;
+  right: 5px;
 }

@@ -17,6 +17,11 @@ class MapsController < ApplicationController
     @map = Map.create(map_params)
   end
 
+  def destroy
+    map = Map.find(params[:id])
+    map.destroy if map.user_id == current_user.id
+  end
+
   def search
     if params[:keyword].present?
     name_ids = Map.where("name LIKE(?)", "%#{params[:keyword]}%" ).pluck(:id)
