@@ -9,17 +9,27 @@ class MapsController < ApplicationController
   def show
     @map = Map.find(params[:id])
   end
+
   def new
     @map = Map.new
   end
 
   def create
-    @map = Map.create(map_params)
+    Map.create(map_params) 
   end
 
   def destroy
     map = Map.find(params[:id])
     map.destroy if map.user_id == current_user.id
+  end
+
+  def edit
+    @map = Map.find(params[:id])
+  end
+
+  def update
+    map = Map.find(params[:id])
+    map.update(map_params) if map.user_id == current_user.id
   end
 
   def search
