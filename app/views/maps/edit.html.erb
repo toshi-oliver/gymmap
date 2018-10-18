@@ -1,0 +1,26 @@
+<%= form_for [@map] do |f| %>
+
+  <div class="contents row">
+    <div class="contents-top">
+      <h2>編集しよう！</h2>
+    </div>
+
+    <div class="contents-body">
+      <div class="contents-left" id="upload-left radius-mid" style="display: ">
+        <div id="Image-upload-button">
+          <%= f.file_field :image ,accept: 'image/jpeg,image/gif,image/png' %>
+        </div>
+      </div>
+
+      <div class="contents-right" id="upload-right" >
+        <%= f.label "gym" %>
+        <%= f.text_field :name %>
+        <%= f.select :place_id, [["東京", 1], ["神奈川", 2], ["埼玉", 3], ["千葉", 4], ["群馬", "5"], ["栃木", "6"], ["山梨", "7"], ["茨城","8"]] %>
+        <%= f.select :category_id, [["ゴールドジム", 1], ["エニタイムフィットネス", 2], ["ライザップ", 3], ["カーブス", 4], ["セントラル", "5"], ["ティップネス", "6"], ["コナミスポーツクラブ","7"], ["その他", "8"]] , class:"form-control" %>
+        <%= f.label "review" %>
+        <%= f.text_field :content %>
+        <%= f.submit "SENT", class: "btn" %>
+      </div>
+    </div>
+  </div>
+<% end %>
