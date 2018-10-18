@@ -274,7 +274,18 @@ footer {
 
 
 
-a.search, .my-map {
+a.search {
+  width: 200px;
+  height: 250px;
+  display: block;
+  float: left;
+  text-align: center;
+  margin-right: 15px;
+  margin-left: 15px;
+  border: 1px solid rgb(116, 120, 124);
+}
+
+.my-map {
   width: 200px;
   height: 250px;
   display: block;
@@ -323,6 +334,9 @@ ul.body {
   margin: 0 auto;
 }
 
+h4.gym-name {
+  text-align: center;
+}
 .gym-name  {
   width: 100%;
   margin: -5px 0;
@@ -330,8 +344,12 @@ ul.body {
 }
 
 ul.map-edit {
-  list-style: none;
   position: absolute;
   bottom: 0;
   right: 5px;
+}
+
+ul.map-edit li {
+  list-style: none;
+  display: inline-block;
 }
