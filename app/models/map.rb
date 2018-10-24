@@ -1,6 +1,7 @@
 class Map < ApplicationRecord
   acts_as_paranoid
   belongs_to :user
+  has_many :likes
   mount_uploader :image, ImageUploader
   validate :image_size
   validates :name, presence: true
