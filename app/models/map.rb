@@ -1,7 +1,7 @@
 class Map < ApplicationRecord
   acts_as_paranoid
   belongs_to :user
-  has_many :likes
+  has_many :likes, dependent: :destroy
   mount_uploader :image, ImageUploader
   validate :image_size
   validates :name, presence: true
@@ -14,5 +14,8 @@ class Map < ApplicationRecord
       errors.add(:image, "should be less than 5MB")
     end
   end
-  
+
+  def like_user(user_id)
+    likes.find_by(user_id: user_id)
+  end
 end
