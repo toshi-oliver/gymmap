@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_24_085732) do
+ActiveRecord::Schema.define(version: 2018_10_26_075352) do
 
   create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -19,12 +19,11 @@ ActiveRecord::Schema.define(version: 2018_10_24_085732) do
   end
 
   create_table "likes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "map_id"
+    t.bigint "user_id"
+    t.bigint "map_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["map_id"], name: "index_likes_on_map_id"
-    t.index ["user_id", "map_id"], name: "index_likes_on_user_id_and_map_id", unique: true
     t.index ["user_id"], name: "index_likes_on_user_id"
   end
 
@@ -38,6 +37,7 @@ ActiveRecord::Schema.define(version: 2018_10_24_085732) do
     t.bigint "user_id"
     t.text "content"
     t.datetime "deleted_at"
+    t.integer "likes_count"
     t.index ["user_id"], name: "index_maps_on_user_id"
   end
 
@@ -60,4 +60,6 @@ ActiveRecord::Schema.define(version: 2018_10_24_085732) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "likes", "maps"
+  add_foreign_key "likes", "users"
 end
